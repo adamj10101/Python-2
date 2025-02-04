@@ -1,0 +1,17 @@
+s = input("Введите строку: ")
+count = 1
+i = 0
+res = ""
+n = len(s)
+
+while i < n:
+    a = s[i]
+    i += 1
+    num = ""
+    while i < n and "0" <= s[i] <= "9":
+        num += s[i]
+        i += 1
+    count = int(num) if num else 1
+    res += a * count
+    
+print("Результат: ", res)
